@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		5C9E53B92CEB451000F745C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E53B82CEB451000F745C5 /* AppDelegate.swift */; };
 		5C9E53BB2CEB451000F745C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E53BA2CEB451000F745C5 /* SceneDelegate.swift */; };
-		5C9E53BD2CEB451000F745C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E53BC2CEB451000F745C5 /* ViewController.swift */; };
+		5C9E53BD2CEB451000F745C5 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E53BC2CEB451000F745C5 /* TaskListViewController.swift */; };
 		5C9E53C02CEB451000F745C5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5C9E53BF2CEB451000F745C5 /* Base */; };
 		5C9E53C22CEB451100F745C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C9E53C12CEB451100F745C5 /* Assets.xcassets */; };
 		5C9E53C52CEB451100F745C5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5C9E53C42CEB451100F745C5 /* Base */; };
+		5C9E53CD2CEB452A00F745C5 /* TaskListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E53CC2CEB452A00F745C5 /* TaskListModel.swift */; };
+		5C9E53CF2CEB453F00F745C5 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E53CE2CEB453F00F745C5 /* TaskListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C9E53B52CEB451000F745C5 /* TaskListToMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskListToMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9E53B82CEB451000F745C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C9E53BA2CEB451000F745C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C9E53BC2CEB451000F745C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C9E53BC2CEB451000F745C5 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		5C9E53BF2CEB451000F745C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C9E53C12CEB451100F745C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C9E53C42CEB451100F745C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C9E53C62CEB451100F745C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C9E53CC2CEB452A00F745C5 /* TaskListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListModel.swift; sourceTree = "<group>"; };
+		5C9E53CE2CEB453F00F745C5 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				5C9E53B82CEB451000F745C5 /* AppDelegate.swift */,
 				5C9E53BA2CEB451000F745C5 /* SceneDelegate.swift */,
-				5C9E53BC2CEB451000F745C5 /* ViewController.swift */,
+				5C9E53BC2CEB451000F745C5 /* TaskListViewController.swift */,
+				5C9E53CC2CEB452A00F745C5 /* TaskListModel.swift */,
+				5C9E53CE2CEB453F00F745C5 /* TaskListViewModel.swift */,
 				5C9E53BE2CEB451000F745C5 /* Main.storyboard */,
 				5C9E53C12CEB451100F745C5 /* Assets.xcassets */,
 				5C9E53C32CEB451100F745C5 /* LaunchScreen.storyboard */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C9E53BD2CEB451000F745C5 /* ViewController.swift in Sources */,
+				5C9E53CF2CEB453F00F745C5 /* TaskListViewModel.swift in Sources */,
+				5C9E53BD2CEB451000F745C5 /* TaskListViewController.swift in Sources */,
 				5C9E53B92CEB451000F745C5 /* AppDelegate.swift in Sources */,
 				5C9E53BB2CEB451000F745C5 /* SceneDelegate.swift in Sources */,
+				5C9E53CD2CEB452A00F745C5 /* TaskListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
