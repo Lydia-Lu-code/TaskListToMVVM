@@ -17,18 +17,7 @@ class TaskListViewModel {
         }
     }
     var onTasksUpdated: (() -> Void)?
-    
-//    func loadTasks(for date: Date) {
-//        // 業務邏輯處理
-//    }
-    
-//    func addTask(_ task: Task) {
-//        // 資料處理邏輯
-//    }
-//    
-//    private func scheduleNotification(for task: Task) {
-//        // 通知處理邏輯
-//    }
+ 
 }
 
 extension TaskListViewModel {
@@ -60,5 +49,13 @@ extension TaskListViewModel {
         let request = UNNotificationRequest(identifier: task.id.uuidString, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request)
+    }
+}
+
+
+extension TaskListViewModel {
+    func updateTask(_ task: Task, at index: Int) {
+        guard index < tasks.count else { return }
+        tasks[index] = task
     }
 }
