@@ -3,7 +3,6 @@ import UIKit
 class TaskListViewController: UIViewController {
     private let viewModel = TaskListViewModel()
     private let tableView = UITableView()
-//    private let addButton = UIButton(type: .system)
     private var alert: UIAlertController?
     
     override func viewDidLoad() {
@@ -155,51 +154,6 @@ class TaskListViewController: UIViewController {
         present(alert!, animated: true)
     }
     
-//    @objc private func addButtonTapped() {
-//        let alert = UIAlertController(title: "新增任務", message: nil, preferredStyle: .alert)
-//        
-//        // 標題輸入
-//        alert.addTextField { textField in
-//            textField.placeholder = "任務標題"
-//        }
-//        
-//        // 優先級選擇
-//        alert.addTextField { textField in
-//            textField.placeholder = "優先級 (低/中/高)"
-//            textField.text = "中"
-//        }
-//        
-//        // 狀態選擇
-//        alert.addTextField { textField in
-//            textField.placeholder = "狀態 (待辦/進行中/完成)"
-//            textField.text = "待辦"
-//        }
-//        
-//        let addAction = UIAlertAction(title: "新增", style: .default) { [weak self] _ in
-//            guard let title = alert.textFields?[0].text, !title.isEmpty,
-//                  let priorityString = alert.textFields?[1].text,
-//                  let statusString = alert.textFields?[2].text,
-//                  let priority = TaskPriority(rawValue: priorityString),
-//                  let status = TaskStatus(rawValue: statusString) else { return }
-//            
-//            let newTask = Task(
-//                id: UUID(),
-//                title: title,
-//                description: nil,
-//                dueDate: Date(),
-//                status: status,
-//                priority: priority,
-//                notificationEnabled: false
-//            )
-//            
-//            self?.viewModel.addTask(newTask)
-//        }
-//        
-//        alert.addAction(UIAlertAction(title: "取消", style: .cancel))
-//        alert.addAction(addAction)
-//        
-//        present(alert, animated: true)
-//    }
 }
 
 // MARK: - UITableViewDataSource & Delegate
@@ -225,57 +179,6 @@ extension TaskListViewController: UITableViewDataSource, UITableViewDelegate {
         showEditAlert(for: indexPath)
     }
     
-//    private func showEditAlert(for indexPath: IndexPath) {
-//        let task = viewModel.tasks[indexPath.row]
-//        let alert = UIAlertController(title: "編輯任務", message: nil, preferredStyle: .alert)
-//        
-//        // 標題輸入
-//        alert.addTextField { textField in
-//            textField.text = task.title
-//            textField.placeholder = "任務標題"
-//        }
-//        
-//        // 優先級選擇 - 使用選擇器
-//        alert.addTextField { textField in
-//            textField.text = task.priority.rawValue
-//        }
-//        let priorities = ["低", "中", "高"]
-//        let priorityPicker = UIPickerView()
-//        priorityPicker.delegate = self
-//        priorityPicker.dataSource = self
-//        alert.textFields?[1].inputView = priorityPicker
-//        
-//        // 狀態選擇 - 使用選擇器
-//        alert.addTextField { textField in
-//            textField.text = task.status.rawValue
-//        }
-//        let statuses = ["待辦", "進行中", "完成"]
-//        let statusPicker = UIPickerView()
-//        statusPicker.delegate = self
-//        statusPicker.dataSource = self
-//        alert.textFields?[2].inputView = statusPicker
-//        
-//        let saveAction = UIAlertAction(title: "儲存", style: .default) { [weak self] _ in
-//            guard let title = alert.textFields?[0].text,
-//                  let priorityText = alert.textFields?[1].text,
-//                  let statusText = alert.textFields?[2].text,
-//                  let priority = TaskPriority(rawValue: priorityText),
-//                  let status = TaskStatus(rawValue: statusText)
-//            else { return }
-//            
-//            var updatedTask = task
-//            updatedTask.title = title
-//            updatedTask.priority = priority
-//            updatedTask.status = status
-//            
-//            self?.viewModel.updateTask(updatedTask, at: indexPath.row)
-//        }
-//        
-//        alert.addAction(UIAlertAction(title: "取消", style: .cancel))
-//        alert.addAction(saveAction)
-//        
-//        present(alert, animated: true)
-//    }
 
 }
 
